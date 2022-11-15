@@ -1,7 +1,4 @@
 
-
-
-
 <%@page import="Clases.ConexionBaseDeDatos"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
@@ -71,7 +68,9 @@
                               Statement smt;
                               ResultSet rs;
                               smt = conn.conectar().createStatement();
-                              rs = smt.executeQuery("SELECT * FROM final_progra.libro");
+                              rs = smt.executeQuery("SELECT * FROM libro "
+                                      + "INNER JOIN tipo_pasta "
+                                      + "ON libro.tipo_pasta_id = tipo_pasta.id");
                     %>
               
                     
@@ -177,7 +176,7 @@
                     <div  >
    <form class="form-register"   method="POST"  id="form" name="form"  >
               
-        <h1>Registro de Libros</h1>
+        <h1>Registro</h1>
         <br>
         
             <div class="form-group">
@@ -201,8 +200,8 @@
         
           
           <select class="form-control" name="cinco">
-                <option value="1">Duro</option>
-                <option value="2">Blando</option>
+                <option value="1">BLANDA</option>
+                <option value="2">GRUESA</option>
             </select><br>
            
             
@@ -230,11 +229,11 @@
                     
                      <div class="container mx-auto">
                               <div class="container my-5">
-                                        <center><h1 class="">Tabla libro</h1></center>
+                                        <center><h1 class="">Tabla</h1></center>
                               </div>
                               <div class="d-flex justify-content-between mx-5 my-4">
                                         <form class="d-flex" role="search">
-                                       <input  class="btn btn-success" type="submit" value="Mostrar todos los cursos">
+                                       <input  class="btn btn-success" type="submit" value="Mostrar toda la tabla">
                                         </form>
                                        
                                        <form class="d-flex" role="search">
@@ -284,7 +283,7 @@
                                                             <td><%= rs.getString("nombre")%></td>
                                                             <td><%= rs.getString("fecha_lanzamiento")%></td>
                                                             <td><%= rs.getString("autor")%></td>
-                                                            <td><%= rs.getString("tipo_pasta_id")%></td>
+                                                            <td><%= rs.getString("descripcion")%></td>
                                                             
                                                            
                                                             <td>

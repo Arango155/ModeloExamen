@@ -98,8 +98,8 @@
             
             <select class="form-control" name="cinco" value="<%= rs.getInt("tipo_pasta_id")%>">
               
-                <option value="1">Duro</option>
-                <option value="2">Blando</option>
+                <option value="1">BLANDA</option>
+                <option value="2">GRUESA</option>
             </select><br>
             
             <div>
