@@ -601,38 +601,3 @@ header {
       display: none;
    }
 }
-
-/*Para la ventana modal*/
-
-
-
-#modal{
-  
-   top: 10px;
-   color: #000;
-   max-width: 50ch;
-   padding: 2rem;
-   left: 100px;
-}
-
-#modal::backdrop{
-
-   background-color: rgba(0, 0, 0, 0.55);
-}
-
-
-button{
-   background-color: var(--main-color);
-  
-   border-radius: 5px;
-   color: white;
-}
-
-/*Para el formulario dentro de la ventana modal*/
-
-
-   
-  
-
-
-

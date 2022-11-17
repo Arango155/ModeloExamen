@@ -87,18 +87,18 @@
                     <a href="home.jsp">
                         
                   <i class='bx bx-grid-alt'></i>
-                  <span class="links_name">Alumno</span>
+                  <span class="links_name">Register</span>
                 </a>
-                 <span class="tooltip">Alumno</span>
+                 <span class="tooltip">Register</span>
               </li>
               <li>
                
-                  <a href="home2.jsp">
+                  <a href="#">
                  <i class='bx bx-user' ></i>
                  
-                 <span class="links_name">Curso</span>
+                 <span class="links_name">Table</span>
                </a>
-               <span class="tooltip">Curso</span>
+               <span class="tooltip">Table</span>
              </li>
              <li>
                <a href="#">
@@ -108,14 +108,14 @@
                <span class="tooltip">Messages</span>
              </li>
              <li>
-                 <a href="Vistas/Collaborator.jsp">
+                 <a href="#">
                  <i class='bx bx-pie-chart-alt-2' ></i>
                  <span class="links_name">Collaborator</span>
                </a>
                <span class="tooltip">Collaborator</span>
              </li>
              <li>
-                 <a href="Vistas/Projects.jsp">
+                 <a href="#">
                  <i  class='bx bx-folder' ></i>
                  <span class="links_name">Project Manager</span>
                </a>
@@ -159,17 +159,9 @@
 
                   </div>    
 
-              
-          
-               
-          
-            
 
-             
-             
-            
                     
-                    <br><!-- comment -->
+                    <br>
                     <br>
                     <br>
                     <br>
