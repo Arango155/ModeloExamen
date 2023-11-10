@@ -22,20 +22,24 @@ public class PasswordController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-           if(request.getSession().getAttribute("user")==null){
-               //response.sendRedirect(request.getContextPath()+"/index.jsp");
-               request.setAttribute("success", 0);
-                request.getRequestDispatcher("/index.jsp").forward(request, response);
-           }else{
-               request.setAttribute("UsuarioLogueado", request.getSession().getAttribute("user"));
-               request.getRequestDispatcher("home.jsp").forward(request, response);
-           }
-           
+        throws ServletException, IOException {
+    response.setContentType("text/html;charset=UTF-8");
+    try (PrintWriter out = response.getWriter()) {
+        if (request.getSession().getAttribute("user") == null) {
+            // User is not logged in, redirect to the login page
+            request.setAttribute("success", 0);
+            request.getRequestDispatcher("/index.jsp").forward(request, response);
+        } else {
+            // User is logged in, redirect to the home page
+            request.setAttribute("UsuarioLogueado", request.getSession().getAttribute("user"));
+            response.sendRedirect(request.getContextPath() + "/home.jsp");
         }
+    } catch (Exception ex) {
+        // Handle exceptions more specifically if needed
+        ex.printStackTrace(); // Consider logging the exception instead
     }
+}
+
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
